@@ -23,5 +23,5 @@ three = putStrLn answer
     where
         police = "パトカー"
         taxi = "タクシー"
-        untupple (a, b) = a ++ b
-        answer = fmap untupple $ zip police taxi
+        untupple (a, b) = [a, b]
+        answer = zip police taxi >>= untupple
